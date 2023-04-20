@@ -1,0 +1,7 @@
+model/
+model_store/
+squad_model/
+logs/
+.vscode/
+.history/
+__pycache__

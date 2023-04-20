@@ -1,0 +1,12 @@
+pathlib
+torch
+torchserve
+torch-model-archiver
+tokenizers==0.13.3
+transformers==4.28.1
+evaluate
+datasets==2.11.0
+grpcio
+protobuf
+grpcio-tools
+requests

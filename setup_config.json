@@ -1,0 +1,11 @@
+{
+    "model_name": "deepset/roberta-base-squad2",
+    "mode": "question_answering",
+    "do_lower_case": true,
+    "num_labels": "0",
+    "save_mode": "pretrained",
+    "max_length": "128",
+    "captum_explanation": true,
+    "FasterTransformer": false,
+    "embedding_name": "roberta"
+}

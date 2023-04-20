@@ -1,0 +1,16 @@
+FROM pytorch/torchserve:0.7.1-gpu
+
+
+WORKDIR /opt
+
+COPY requirements.txt requirements.txt
+RUN pip install -r requirements.txt
+
+COPY . /opt
+
+USER 0:0
+RUN python -m grpc_tools.protoc --proto_path=proto/ --python_out=src/ts_scripts --grpc_python_out=src/ts_scripts proto/inference.proto proto/management.proto 
+
+CMD sh run-torchserver.sh
+
+ENTRYPOINT ["bash", "entrypoint.sh" ]
